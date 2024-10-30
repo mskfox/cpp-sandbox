@@ -7,7 +7,6 @@ public:
 		int m = nums1.size();
 		int n = nums2.size();
 
-		if (m > n) { return findMedianSortedArrays(nums2, nums1); }
 		if (m > n) { std::swap(nums1, nums2); std::swap(m, n); }
 
 		int left = 0;
