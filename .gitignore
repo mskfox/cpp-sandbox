@@ -1,5 +1,6 @@
-# IntelliJ IDEA project files
+# IDE specific project files
 .idea
+.vscode
 
 # Build output directories
 cmake-build-debug
