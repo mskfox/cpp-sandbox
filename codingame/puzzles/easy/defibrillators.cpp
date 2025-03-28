@@ -6,6 +6,10 @@
 #include <limits>
 #include <sstream>
 
+#ifndef M_PI
+    #define M_PI 3.14159265358979323846
+#endif
+
 // the radius of the Earth (km)
 constexpr double EARTH_RADIUS = 6371;
 
