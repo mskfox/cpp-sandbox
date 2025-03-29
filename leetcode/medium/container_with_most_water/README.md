@@ -9,6 +9,7 @@ Return the maximum amount of water a container can store.
 **Notice**  that you may not slant the container.
 
 **Example 1:**
+
 <img alt="" src="https://s3-lc-upload.s3.amazonaws.com/uploads/2018/07/17/question_11.jpg" style="width: 600px; height: 287px;">
 
 ```
