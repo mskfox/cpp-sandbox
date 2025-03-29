@@ -23,8 +23,8 @@ public:
 		dp[0][0] = true;
 
 		// handle patterns with leading wildcards (e.g., "a*", ".*")
-		for (int j = 1; j <= p_length; ++j) {
-			if (p[j - 1] == '*' && j > 1) {
+		for (int j = 2; j <= p_length; ++j) {
+			if (p[j - 1] == '*') {
 				dp[0][j] = dp[0][j - 2];
 			}
 		}
