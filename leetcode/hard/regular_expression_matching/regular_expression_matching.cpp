@@ -31,19 +31,19 @@ public:
 
 		for (size_t i = 1; i <= s_length; ++i) {
             for (size_t j = 1; j <= p_length; ++j) {
-                const char currentPattern = p[j - 1];
-                const char currentText = s[i - 1];
+                const char current_pattern = p[j - 1];
+                const char current_text = s[i - 1];
 
-                if (currentPattern == '.' || currentPattern == currentText) {
+                if (current_pattern == '.' || current_pattern == current_text) {
                     dp[i][j] = dp[i - 1][j - 1];
                 }
-				else if (currentPattern == '*') {
-                    const char precedingPattern = p[j - 2];
-                    const bool matchesZero = dp[i][j - 2];
-                    const bool matchesMore = dp[i - 1][j] &&
-						(currentText == precedingPattern || precedingPattern == '.');
+				else if (current_pattern == '*') {
+                    const char preceding_pattern = p[j - 2];
+                    const bool matches_zero = dp[i][j - 2];
+                    const bool matches_more = dp[i - 1][j] &&
+						(current_text == preceding_pattern || preceding_pattern == '.');
 
-                    dp[i][j] = matchesZero || matchesMore;
+                    dp[i][j] = matches_zero || matches_more;
                 }
             }
         }
